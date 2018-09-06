@@ -7,6 +7,10 @@
           <a class="nav-link" href="#">New hires</a>
           @if(Auth::check())
           <a class="nav-link ml-auto" href="#">{{ Auth::user()->name }}</a>
+          <a href="/logout" class="nav-link ">Logout</a>
+          @else
+          <a href="/login" class="nav-link ml-auto">Login</a>
+          <a href="/register" class="nav-link ">Register</a>
           @endif
         </nav>
       </div>
